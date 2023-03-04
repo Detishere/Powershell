@@ -1,0 +1,1 @@
+ Get-ChildItem "Documents\New folder" -Recurse | Copy-Item -Destination "Documents\New folder2" -Recurse -Container
