@@ -1,4 +1,4 @@
-$ipAddress = (Get-NetIPAddress -AddressFamily IPv4 | Select-Object -ExpandProperty IPAddress)[0]
+$ipAddress = (Get-NetAdapter -InterfaceDescription 'Wi-Fi').IPv4Address.IPAddress
 $port = 80
 
 Test-NetConnection -ComputerName $ipAddress -Port $port
